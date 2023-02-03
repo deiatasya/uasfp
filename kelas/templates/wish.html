@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block konten %}
+
+<div class="album py-5 bg-light">
+<div class="container">
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+<div class="col">
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/Pria.png' %}" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">Pria</h5>
+            <p class="card-text">Pakaian & Sepatu Pria</p>
+            <a href="#" class="btn btn-primary">Check Out</a>
+        </div>
+        </div>
+</div>
+
+<div class="col">
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/kids.jpg' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Anak - Anak</h5>
+            <p class="card-text">Pakaian & Sepatu</p>
+            <a href="#" class="btn btn-primary">Check Out</a>
+        </div>
+        </div>
+</div>
+<div class="col">
+    <div class="card" style="width: 18rem;">
+        <img src="{% static 'img/wanita.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Wanita</h5>
+            <p class="card-text">Pakaian & Sepatu Wanita</p>
+            <a href="#" class="btn btn-primary">Check Out</a>
+        </div>
+      </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+
+{% endblock %}

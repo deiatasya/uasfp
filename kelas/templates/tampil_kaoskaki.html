@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block konten %}
+<head>
+    <link href="{% static 'assets/css/font-awesome.css' %}" rel="stylesheet" /> 
+   <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+
+
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper" >
+        <div id="page-inner" >
+           <center><h1> List Pesanan Sepatu </h1></center>
+           {% for message in messages %}
+                {% if message %}
+                    <div class="alert alert-succes">{{message}}</div>
+                {% endif %}
+            {% endfor %}
+
+            <table border="" class="table table-bordered">
+                <tr> 
+                    <td>Kode </td>
+                    <td>Nama </td>
+                    <td>Jumlah </td>
+                    <td>Harga </td>
+                    <td>keterangan </td>
+                    <td>jenis </td>
+                </tr>
+                {% for kaoskaki in kaoskakis %}
+                <tr>
+                    <td><a href="{% url 'ubah_kaoskaki' kaoskaki.id %}">{{ kaoskaki.kodekaoskaki }}</a></td>
+                    <td>{{ kaoskaki.nama }}</td>
+                    <td>{{ kaoskaki.stok }}</td>
+                    <td>{{ kaoskaki.harga }}</td>
+                    <td>{{ kaoskaki.link_gbr }}</td>
+                    <td>{{kaoskaki.jeniskk_id.nama}}</td> <!-- ini temuan baru! menampilkan nama jenis-->
+                    <td><button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#hapus-{{ kaoskaki.id }}">Hapus</button></td>
+                </tr>
+                <!-- Modal-->
+                <div class="modal fade" id="hapus-{{ kaoskaki.id }}" tabindex="-1" arial-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Yakin akan dihapus ?</h1>
+                        <button type="button" class="btn close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Nama kaoskaki : {{ kaoskaki.nama }}
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn-btn-secondary" data-bs-dismiss="modal">Batal</button>
+                        <a href="{% url 'hapus_kaoskaki' kaoskaki.id %}" class="btn btn-danger">Yakin</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </table> 
+            <li class="nav-item">
+                <a class="{% if navbar == 'tambah_kaoskaki' %} active {% endif %}"href="/tambah_kaoskaki" class="btn btn-primary btn-lg disabled" tabindex="-1" role="button" aria-disabled="true">Tambah Barang</a>
+              </li>     
+    {% endblock %}
+</body>

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block konten %}
+
+<div class="album py-5 bg-light">
+    <div class="container">
+
+      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+        <div class="col">
+          <div class="card shadow-sm">
+            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Bakso</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Pria</text></svg> {% endcomment %}
+            <img src="{% static 'img/pria.png' %}" class="car d-img-top">
+            <div class="card-body">
+              <p class="card-text">Tersedia berbagai Macam Pakaian Pria</p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Nasi</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Nasi</text></svg> {% endcomment %}
+            <img src="{% static 'img/kids.jpg' %}" class="car d-img-top">
+            <div class="card-body">
+            <p class="card-text">Tersedia Berbagai Macam Pakaian Anak-Anak</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <div class="col">
+        <div class="card shadow-sm">
+            {% comment %} <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Minuman</title><rect width="100%" height="100%" fill="#55595c"></rect><text x="50%" y="50%" fill="#eceeef" dy=".3em">Minuman</text></svg> {% endcomment %}
+            <img src="{% static 'img/wanita.png' %}" class="car d-img-top">
+            <div class="card-body">
+            <p class="card-text">Tersedia Berbagai Macam Pakaian Wanita</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

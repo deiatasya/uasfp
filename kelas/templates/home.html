@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block konten %}
+
+<section id="isi">
+  <!-- Carousel wrapper -->
+  <div class="container-fluid">
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'img/adidas2.jpg' %}" class="d-block w-100" alt="...">
+          <div class="carousel-caption d-none d-md-block" style="-webkit-text-fill-color: rgb(68, 141, 201); font-size: large;">
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'img/adidas1.jpg' %}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="-webkit-text-fill-color: rgb(68, 141, 201); font-size: large;">
+        </div>
+      </div>
+      <div class="carousel-item" >
+        <img src="{% static 'img/adidas3.jpg' %}"class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block" style="-webkit-text-fill-color: rgb(68, 141, 201); font-size: large;">   
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div style="-webkit-text-fill-color: rgb(0, 1, 3); font-size: large; text-align: center">
+    <br>
+    <h2><strong>Selamat Datang di Website ADIDAS</strong> </h2>
+    <p>Selamat Berbelanja :).</p>
+</div>
+<!-- Carousel wrapper -->
+
+<!-- placeholder -->
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card" style="width: 25rem;">
+        <img src="{% static 'img/pria.png' %}" class="card-img-top">
+          <div class="card-body mb-3">
+            <h5 class="card-title">Pria</h5>
+            {% comment %} <p class="card-text">Menyediakan Macam-Macam Bakso</p> {% endcomment %}
+            <a href="#" class="btn btn-primary">Lihat -></a>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 25rem;">
+        <img src="{% static 'img/kids.jpg' %}" class="car d-img-top">
+          <div class="card-body mb-3">
+            <h5 class="card-title">Anak-Anak</h5>
+            {% comment %} <p class="card-text">Menyediakan macam-macam nasi</p> {% endcomment %}
+            <a href="#" class="btn btn-primary">Lihat -></a>
+          </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card" style="width: 25rem;">
+        <img src="{% static 'img/wanita.png' %}" class="car d-img-top">
+          <div class="card-body mb-3">
+            <h5 class="card-title">wanita</h5>
+            {% comment %} <p class="card-text">Menyediakan Macam-Macam Minuman</p> {% endcomment %}
+            <a href="#" class="btn btn-primary">lihat -></a>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- placeholder -->
+
+</section>
+{% endblock %}
